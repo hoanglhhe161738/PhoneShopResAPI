@@ -20,7 +20,7 @@ namespace PhoneShopResAPI.Controllers
         public Account? login(Account account)
         {
             Account? acc = _phoneStoreContext.Accounts
-                .Where(a => a == account)
+                .Where(a => a.Username == account.Username && a.Password == account.Password)
                 .FirstOrDefault();
 
             return acc;
