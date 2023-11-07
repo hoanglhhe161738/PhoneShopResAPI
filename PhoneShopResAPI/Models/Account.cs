@@ -15,6 +15,6 @@ namespace PhoneShopResAPI.Models
         public string? Email { get; set; }
         public string? full_name { get; set; }
 
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order>? Orders { get; set; }
     }
 }
