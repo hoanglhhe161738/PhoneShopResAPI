@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PhoneShopResAPI.DTO;
 using PhoneShopResAPI.Models;
 
 namespace PhoneShopResAPI.Controllers
@@ -37,5 +38,12 @@ namespace PhoneShopResAPI.Controllers
             List<Phone> list = GetProductt();
             return list.AsEnumerable<Phone>();
         }
+
+        //[HttpGet, Route()]
+        //public Phone? Get_Detail(int phoneId)
+        //{
+        //    Phone? phone = _phoneStoreContext.Phones.Where(p => p.PhoneId == phoneId).FirstOrDefault();
+        //    return phone;
+        //}
     }
 }

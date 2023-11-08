@@ -11,6 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PhoneStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionStrings")));
 builder.Services.AddScoped<PhoneStoreContext>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
