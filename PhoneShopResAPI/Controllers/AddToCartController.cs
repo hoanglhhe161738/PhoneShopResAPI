@@ -7,5 +7,6 @@ namespace PhoneShopResAPI.Controllers
     [ApiController]
     public class AddToCartController : ControllerBase
     {
+
     }
 }
