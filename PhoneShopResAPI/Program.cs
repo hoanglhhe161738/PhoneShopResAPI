@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using PhoneShopResAPI.Models;
+using PhoneShopResAPI.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PhoneStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("PhoneStore")));
 builder.Services.AddScoped<PhoneStoreContext>();
+builder.Services.AddScoped<IVnPayService, VnPayService>();
+builder.Services.AddControllersWithViews();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
