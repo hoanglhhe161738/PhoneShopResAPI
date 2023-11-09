@@ -10,7 +10,7 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<PhoneStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("PhoneStore")));
+builder.Services.AddDbContext<PhoneStoreContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("MyConnectionStrings")));
 builder.Services.AddScoped<PhoneStoreContext>();
 builder.Services.AddScoped<IVnPayService, VnPayService>();
 builder.Services.AddControllersWithViews();
