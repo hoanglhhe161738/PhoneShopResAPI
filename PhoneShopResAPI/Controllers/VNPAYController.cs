@@ -30,9 +30,9 @@ namespace PhoneShopResAPI.Controllers
             ViewBag.Response = response;
             return View("/Views/Result.cshtml", response);
         }
-        public IActionResult Index()
+        public static IActionResult Index()
         {
-            return View();
+            return null;
         }
     }
 
