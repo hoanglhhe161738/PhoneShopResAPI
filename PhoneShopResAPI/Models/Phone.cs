@@ -11,7 +11,7 @@ namespace PhoneShopResAPI.Models
         }
 
         public int PhoneId { get; set; }
-        public string ModelName { get; set; } = null!;
+        public string? ModelName { get; set; } 
         public string? Manufacturer { get; set; }
         public decimal? Price { get; set; }
         public string? Description { get; set; }
