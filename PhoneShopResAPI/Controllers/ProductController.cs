@@ -39,11 +39,11 @@ namespace PhoneShopResAPI.Controllers
             return list.AsEnumerable<Phone>();
         }
 
-        //[HttpGet, Route()]
-        //public Phone? Get_Detail(int phoneId)
-        //{
-        //    Phone? phone = _phoneStoreContext.Phones.Where(p => p.PhoneId == phoneId).FirstOrDefault();
-        //    return phone;
-        //}
+        [HttpGet("getPhone")]
+        public Phone? GetPhone(int phoneId)
+        {
+            Phone? phone = _phoneStoreContext.Phones.Where(p => p.PhoneId == phoneId).FirstOrDefault();
+            return phone;
+        }
     }
 }
