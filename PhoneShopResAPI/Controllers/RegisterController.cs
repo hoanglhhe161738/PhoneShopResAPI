@@ -37,17 +37,5 @@ namespace PhoneShopResAPI.Controllers
             await _phoneStoreContext.SaveChangesAsync();
             return CreatedAtAction(nameof(Create), new { id = account.Username }, account);
         }
-        //public async Task<IActionResult> Create(string username, string password, string email, string full_name)
-        //{
-        //    Account account = new Account();
-        //    account.Username = username;
-        //    account.Password = password;
-        //    account.Email = email;
-        //    account.full_name =
-        //    _phoneStoreContext.Accounts.Add(account);
-        //    await _phoneStoreContext.SaveChangesAsync();
-        //    return CreatedAtAction("CreateAccount", new { id = account.Username }, account);
-
-        //}
     }
 }

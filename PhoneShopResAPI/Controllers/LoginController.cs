@@ -16,11 +16,11 @@ namespace PhoneShopResAPI.Controllers
             _logger = logger;
         }
 
-        [HttpPost(Name = "Login")]
-        public Account? login(Account account)
+        [HttpGet(Name = "Login")]
+        public Account? login(string Email, string password)
         {
             Account? acc = _phoneStoreContext.Accounts
-                .Where(a => a.Username == account.Username && a.Password == account.Password)
+                .Where(a => a.Email == Email && a.Password == password)
                 .FirstOrDefault();
 
             return acc;
